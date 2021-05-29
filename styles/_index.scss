@@ -5,4 +5,9 @@
 
 #mapid {
     height: 100vh;
+    z-index: 0;
+}
+
+.hidden {
+    display: none !important;
 }

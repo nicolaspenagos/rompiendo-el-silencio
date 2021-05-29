@@ -6,5 +6,68 @@
 
 #mapid {
   height: 100vh;
+  z-index: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  z-index: 3;
+  position: fixed;
+  left: 0px;
+  top: 0x;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+  opacity: 0;
+}
+
+.modal__button {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.modal__backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.8);
+}
+
+.modal__container {
+  position: relative;
+}
+
+.modal__content {
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  color: black;
+  height: 300px;
+  width: 100%;
+  max-width: 400px;
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  -webkit-transform: translate(0px, -800px);
+          transform: translate(0px, -800px);
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
