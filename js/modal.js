@@ -1,12 +1,16 @@
 const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal__content');
+const report = document.querySelector('.report');
+const nameInput = document.querySelector('.name');
+const msgInput = document.querySelector('.msg');
 const closeModal = document.querySelector('.closeModal');
-let lat = 0.0;
-let lon = 0.0;
-
-
 
 closeModal.addEventListener('click', handleCloseModal);
+
+report.addEventListener('click', function() {
+    putMarker();
+    handleCloseModal();
+});
 
 function handleOpenModal() {
 
@@ -22,12 +26,13 @@ function handleCloseModal() {
     modalContent.style.transform = 'translate(0px, -500px)';
     document.body.style.overflow = 'hidden scroll';
     document.body.style.overflowX = 'hidden';
-    putMarker();
     setTimeout(function() {
         modal.style.display = 'none';
     }, 500);
 
 }
+
+
 
 function handleModalAppear() {
 
@@ -39,13 +44,25 @@ function handleModalAppear() {
 function putMarker() {
 
     navigator.geolocation.getCurrentPosition(function(position) {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
+
+        let name = nameInput.value;
+        let msg = msgInput.value;
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+
         mymap.setView([lat, lon], 18);
-        var marker = L.marker([lat, lon]).addTo(mymap);
-        var msg = msgInput.value;
-        var popup = marker.bindPopup(`<b>Hello world!</b><br/>${msg}`);
-        popup.openPopup();
+
+        let ref = database.ref('reports/').push();
+
+        let report = {
+            lat,
+            lon,
+            msg,
+            name
+        }
+
+        ref.set(report);
+
     });
 
 }
