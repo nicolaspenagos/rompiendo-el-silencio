@@ -145,7 +145,6 @@ table {
 
 .card {
     overflow: visible;
-    z-index: -1;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -165,6 +164,9 @@ table {
 }
 
 .img {
+    &__abs {
+        position: absolute;
+    }
     &__logo {
         width: 120px;
         margin-top: 40px;
@@ -172,8 +174,19 @@ table {
     &__01 {
         z-index: 3;
         width: 200px;
-        position: absolute;
         top: -120px;
+    }
+    &__02 {
+        width: 190px;
+        top: -90px;
+    }
+    &__04 {
+        top: -100px;
+        width: 140px;
+    }
+    &__03 {
+        top: -110px;
+        width: 220px;
     }
 }
 
@@ -210,6 +223,9 @@ table {
     border: none;
     border-radius: 8px;
     margin-top: 15px;
+    &:hover {
+        background-color: rgb(50, 50, 158)
+    }
 }
 
 .bottom {
@@ -218,4 +234,8 @@ table {
 
 .top {
     margin-top: 70px;
+}
+
+.toper {
+    margin-top: 100px;
 }

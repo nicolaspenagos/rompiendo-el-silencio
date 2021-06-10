@@ -144,7 +144,6 @@ table {
 
 .card {
   overflow: visible;
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,6 +173,10 @@ table {
   height: 64px;
 }
 
+.img__abs {
+  position: absolute;
+}
+
 .img__logo {
   width: 120px;
   margin-top: 40px;
@@ -182,8 +185,22 @@ table {
 .img__01 {
   z-index: 3;
   width: 200px;
-  position: absolute;
   top: -120px;
+}
+
+.img__02 {
+  width: 190px;
+  top: -90px;
+}
+
+.img__04 {
+  top: -100px;
+  width: 140px;
+}
+
+.img__03 {
+  top: -110px;
+  width: 220px;
 }
 
 .title {
@@ -223,12 +240,20 @@ table {
   margin-top: 15px;
 }
 
+.button:hover {
+  background-color: #32329e;
+}
+
 .bottom {
   margin-bottom: 70px;
 }
 
 .top {
   margin-top: 70px;
+}
+
+.toper {
+  margin-top: 100px;
 }
 
 .modal {
