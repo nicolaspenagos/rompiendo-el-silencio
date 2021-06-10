@@ -1,0 +1,40 @@
+.img {
+    &__abs {
+        position: absolute;
+    }
+    &__logo {
+        width: 120px;
+        margin-top: 40px;
+    }
+    &__01 {
+        z-index: 3;
+        width: 200px;
+        top: -120px;
+    }
+    &__02 {
+        width: 190px;
+        top: -90px;
+    }
+    &__04 {
+        top: -100px;
+        width: 140px;
+    }
+    &__03 {
+        top: -110px;
+        width: 220px;
+    }
+    &__05 {
+        width: 280px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    &__06 {
+        top: -90px;
+        width: 175px;
+    }
+    &__goUp {
+        margin-top: 40px;
+        width: 60px;
+    }
+}
