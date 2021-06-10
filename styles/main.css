@@ -173,6 +173,10 @@ table {
   height: 64px;
 }
 
+.card__menu {
+  padding-bottom: 80px;
+}
+
 .title {
   text-align: center;
   font-size: 40px;
@@ -188,6 +192,11 @@ table {
 
 .title--white {
   color: white;
+}
+
+.subtitle {
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .cuerpo {
@@ -208,6 +217,15 @@ table {
   border: none;
   border-radius: 8px;
   margin-top: 15px;
+}
+
+.button--white {
+  background-color: white;
+  color: #2f39b2;
+}
+
+.button--redText {
+  color: #f45050;
 }
 
 .button:hover {
@@ -318,7 +336,6 @@ table {
   width: 280px;
   margin-top: 40px;
   margin-bottom: 40px;
-  position: relative;
 }
 
 .img__06 {
@@ -326,8 +343,69 @@ table {
   width: 175px;
 }
 
+.img__07 {
+  top: -100px;
+  width: 150px;
+}
+
 .img__goUp {
   margin-top: 40px;
   width: 60px;
+}
+
+.img__goBack {
+  width: 15px;
+  top: 40px;
+  left: 40px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container__row {
+  margin-top: 20px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 58px;
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.circle__yellow {
+  background-color: #f4c241;
+}
+
+.circle__red {
+  background-color: #a40404;
+}
+
+.circle__orange {
+  background-color: #f48b41;
 }
 /*# sourceMappingURL=main.css.map */

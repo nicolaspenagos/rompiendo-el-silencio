@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &__row {
+        margin-top: 20px;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    width: 58px;
+    height: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: $font-amatic_sc, cursive;
+    font-weight: bold;
+    font-size: 30px;
+    &__yellow {
+        background-color: $yellow-color;
+    }
+    &__red {
+        background-color: $red-color;
+    }
+    &__orange {
+        background-color: $orange-color;
+    }
+}

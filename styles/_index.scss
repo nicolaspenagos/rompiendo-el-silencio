@@ -161,6 +161,9 @@ table {
         width: auto;
         height: 64px;
     }
+    &__menu {
+        padding-bottom: 80px;
+    }
 }
 
 .title {
@@ -176,6 +179,11 @@ table {
     font-weight: 700;
     font-family: $font-amatic_sc;
     margin-bottom: 30px;
+}
+
+.subtitle {
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 .cuerpo {
@@ -196,6 +204,13 @@ table {
     border: none;
     border-radius: 8px;
     margin-top: 15px;
+    &--white {
+        background-color: white;
+        color: $blue-color;
+    }
+    &--redText {
+        color: $red-text-color;
+    }
     &:hover {
         background-color: rgb(50, 50, 158)
     }

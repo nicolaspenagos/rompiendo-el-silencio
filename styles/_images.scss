@@ -27,14 +27,22 @@
         width: 280px;
         margin-top: 40px;
         margin-bottom: 40px;
-        position: relative;
     }
     &__06 {
         top: -90px;
         width: 175px;
     }
+    &__07 {
+        top: -100px;
+        width: 150px;
+    }
     &__goUp {
         margin-top: 40px;
         width: 60px;
+    }
+    &__goBack {
+        width: 15px;
+        top: 40px;
+        left: 40px;
     }
 }
