@@ -144,14 +144,19 @@ table {
 }
 
 .card {
+    overflow: visible;
+    z-index: -1;
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: white;
+    color: $blue-color;
     align-items: center;
     justify-content: center;
     padding: 40px;
     &--blue {
         background-color: $blue-color;
+        color: white;
     }
     &__header {
         width: auto;
@@ -164,6 +169,12 @@ table {
         width: 120px;
         margin-top: 40px;
     }
+    &__01 {
+        z-index: 3;
+        width: 200px;
+        position: absolute;
+        top: -120px;
+    }
 }
 
 .title {
@@ -171,16 +182,22 @@ table {
         margin-top: 10px;
         margin-bottom: 40px;
     }
+    &--white {
+        color: white;
+    }
     text-align: center;
     font-size: 40px;
     font-weight: 700;
     font-family: $font-amatic_sc;
-    color: $blue-color;
+    margin-bottom: 30px;
 }
 
 .cuerpo {
-    font-size: 20px;
-    color: $blue-color;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 500px;
+    line-height: 25px;
 }
 
 .button {
@@ -193,4 +210,12 @@ table {
     border: none;
     border-radius: 8px;
     margin-top: 15px;
+}
+
+.bottom {
+    margin-bottom: 70px;
+}
+
+.top {
+    margin-top: 70px;
 }
