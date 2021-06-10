@@ -1,8 +1,7 @@
 const mymap = L.map('mapid').setView([3.43722, -76.5225], 14);
-//const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-//const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-const tileUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png';
-const attribution = '&copy; <a href="https://carto.com/">carto.com</a> contributors';
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
 const tiles = L.tileLayer(tileUrl, { attribution });
 
 
