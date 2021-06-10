@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -157,6 +157,7 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 40px;
 }
 
 .card--blue {
@@ -170,7 +171,6 @@ table {
 
 .img__logo {
   width: 120px;
-  margin-top: 80px;
 }
 
 .title {
@@ -182,13 +182,24 @@ table {
 }
 
 .title__logo {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .cuerpo {
   font-size: 18px;
   color: #2f39b2;
+}
+
+.button {
+  width: 180px;
+  height: 45px;
+  background-color: #2f39b2;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
 }
 
 .modal {
