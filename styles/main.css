@@ -188,16 +188,17 @@ table {
 }
 
 .cuerpo {
-  font-size: 18px;
+  font-size: 20px;
   color: #2f39b2;
 }
 
 .button {
   width: 180px;
   height: 45px;
-  background-color: orangered;
+  background-color: #2f39b2;
   color: white;
   font-weight: 700;
+  font-size: 20px;
   border: none;
   border-radius: 8px;
   margin-top: 15px;
