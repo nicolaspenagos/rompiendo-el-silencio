@@ -350,12 +350,12 @@ table {
 
 .img__goUp {
   margin-top: 40px;
-  width: 15px;
+  width: 30px;
 }
 
 .img__goBack {
   width: 15px;
-  top: 40px;
+  top: 40;
   left: 40px;
 }
 
