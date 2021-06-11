@@ -184,6 +184,7 @@ table {
 .subtitle {
     font-weight: bold;
     margin-top: 15px;
+    font-size: 18px;
 }
 
 .cuerpo {
@@ -210,9 +211,6 @@ table {
     }
     &--redText {
         color: $red-text-color;
-    }
-    &:hover {
-        background-color: rgb(50, 50, 158)
     }
 }
 

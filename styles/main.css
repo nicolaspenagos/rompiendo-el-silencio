@@ -197,6 +197,7 @@ table {
 .subtitle {
   font-weight: bold;
   margin-top: 15px;
+  font-size: 18px;
 }
 
 .cuerpo {
@@ -226,10 +227,6 @@ table {
 
 .button--redText {
   color: #f45050;
-}
-
-.button:hover {
-  background-color: #32329e;
 }
 
 .bottom {
@@ -407,5 +404,10 @@ table {
 
 .circle__orange {
   background-color: #f48b41;
+}
+
+#mapid {
+  height: 100vh;
+  z-index: 0;
 }
 /*# sourceMappingURL=main.css.map */
