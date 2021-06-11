@@ -1,3 +1,10 @@
+const params = new URLSearchParams(location.search);
+const map = params.get('map');
+let open = false;
+if (map == 1) {
+    open = true;
+}
+
 const mymap = L.map('mapid').setView([3.43722, -76.5225], 14);
 const attribution = '&copy; <a href="https://www.carto.com/">carto.com</a> contributors';
 const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png';
@@ -18,7 +25,8 @@ reportBtn.addEventListener('click', () => {
 })
 
 checkBox1.addEventListener('click', () => {
-    console.log('Holaaa');
+
+    checkBox1.checked = true;
     checkBox2.checked = false;
     checkBox3.checked = false;
 });
@@ -26,11 +34,13 @@ checkBox1.addEventListener('click', () => {
 checkBox2.addEventListener('click', () => {
     checkBox1.checked = false;
     checkBox3.checked = false;
+    checkBox2.checked = true;
 });
 
 checkBox3.addEventListener('click', () => {
     checkBox2.checked = false;
     checkBox1.checked = false;
+    checkBox3.checked = true;
 });
 
 
@@ -51,8 +61,15 @@ database.ref('reports/').on('value', function(data) {
     data.forEach(data => {
 
         const report = data.val();
-        console.log(report.lat + ' ' + report.lon);
-        const marker = L.marker([report.lat, report.lon], { icon: redIcon }).addTo(mymap);
+        let iconColor = redIcon;
+
+        if (report.number == 1)
+            iconColor = yellowIcon;
+
+        if (report.number == 2)
+            iconColor = orangeIcon;
+
+        const marker = L.marker([report.lat, report.lon], { icon: iconColor }).addTo(mymap);
         const popup = marker.bindPopup(`<b>${report.name}</b><br/>${report.msg}`);
         markers.push(marker);
 
@@ -68,7 +85,7 @@ var LeafIcon = L.Icon.extend({
         shadowSize: [45, 37],
         iconAnchor: [0, 24],
         shadowAnchor: [-8, 20],
-        popupAnchor: [15, -25]
+        popupAnchor: [12, -25]
     }
 });
 

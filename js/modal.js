@@ -10,7 +10,7 @@ closeModal.addEventListener('click', handleCloseModal);
 report.addEventListener('click', function() {
 
     let error = false;
-    if (!nameInput.value || !msgInput.value || (!checkBox1.checked && !checkBox2.checked && !checkBox2.checked)) {
+    if (!nameInput.value || !msgInput.value || (!checkBox1.checked && !checkBox2.checked && !checkBox3.checked)) {
         errorLb.classList.remove('hidden');
         error = true;
     }
@@ -24,6 +24,11 @@ report.addEventListener('click', function() {
 
 function handleOpenModal() {
 
+    nameInput.value = '';
+    msgInput.value = '';
+    checkBox1.checked = false;
+    checkBox2.checked = false;
+    checkBox3.checked = false;
     errorLb.classList.add('hidden');
     document.body.style.overflow = 'hidden';
     modal.style.display = 'block';
@@ -32,6 +37,7 @@ function handleOpenModal() {
 }
 
 function handleCloseModal() {
+
 
     modal.style.opacity = 0;
     modalContent.style.transform = 'translate(0px, -500px)';
@@ -60,6 +66,17 @@ function putMarker() {
         let msg = msgInput.value;
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
+        let number = 1;
+
+        if (checkBox2.checked) {
+            number = 2;
+        }
+
+        if (checkBox3.checked) {
+            number = 3;
+        }
+
+
 
         mymap.setView([lat, lon], 18);
 
@@ -69,7 +86,8 @@ function putMarker() {
             lat,
             lon,
             msg,
-            name
+            name,
+            number
         }
 
         ref.set(report);
@@ -78,4 +96,9 @@ function putMarker() {
 
 }
 
-handleOpenModal();
+
+if (open)
+    handleOpenModal();
+else {
+    handleCloseModal();
+}
