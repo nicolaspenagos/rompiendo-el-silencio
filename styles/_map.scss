@@ -13,3 +13,9 @@
     justify-content: space-between;
     box-shadow: -10px -10px 2px -10px rgb(194, 194, 194) inset;
 }
+
+.pupup {
+    &__title {
+        font-weight: bold;
+    }
+}

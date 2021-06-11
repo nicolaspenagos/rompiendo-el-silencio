@@ -8,8 +8,19 @@ const closeModal = document.querySelector('.closeModal');
 closeModal.addEventListener('click', handleCloseModal);
 
 report.addEventListener('click', function() {
-    putMarker();
-    handleCloseModal();
+
+    errorLb.classList.add('hidden');
+    let error = false;
+    if (!nameInput.value || !msgInput.value || (!checkBox1.checked && !checkBox2.checked && !checkBox2.checked)) {
+        errorLb.classList.remove('hidden');
+        error = true;
+    }
+
+    if (!error) {
+        putMarker();
+        handleCloseModal();
+    }
+
 });
 
 function handleOpenModal() {
