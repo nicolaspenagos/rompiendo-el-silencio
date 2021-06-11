@@ -29,4 +29,11 @@
     &__orange {
         background-color: $orange-color;
     }
+    &--map {
+        z-index: 4;
+        width: 30px;
+        height: 30px;
+        font-size: 22px;
+        margin-left: 5px;
+    }
 }

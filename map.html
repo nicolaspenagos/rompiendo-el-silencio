@@ -37,18 +37,35 @@
         <div class="modal__backdrop">
             <div class="modal__container">
                 <article class="modal__content">
-                    <input class="name" placeholder="Name">
-                    <input class="msg" placeholder="Tell us">
-                    <button class="modal__button report">Report</button>
-                    <button class="closeModal">X</button>
+                    <img src="./img/close.png" class="closeModal">
+                    <h1 class="title title--white">REPORTA TU CASO</h1>
+                    <input class="name input" placeholder="Nombre">
+                    <input class="msg input" placeholder="Cuéntanos">
+                    <p class="cuerpo">Selecciona el nivel de gravedad</p>
+                    <div class="level">
+                        <div class="level__option">
+                            <input type="checkbox" class="1">
+                            <div class="circle circle__yellow circle--map">1</div>
+                        </div>
+                        <div class="level__option">
+                            <input type="checkbox" class="2">
+                            <div class="circle circle__orange circle--map">2</div>
+                        </div>
+                        <div class="level__option">
+                            <input type="checkbox" class="1">
+                            <div class="circle circle__red circle--map">3</div>
+                        </div>
+
+                    </div>
+                    <button class="modal__button report button button--white button--redText">¡Reportar!</button>
                 </article>
             </div>
     </section>
 
     <header class="header">
-        <img src="./img/go_back.png" class="img__goBackMap">
+        <img src="./img/go_back.png" class="img__goBackMap goBackMap">
         <img src="./img/logo.png" class="img__logoMap">
-        <img src="./img/report.png" class="img__report">
+        <img src="./img/report.png" class="img__report reportBtn">
     </header>
     <div id="mapid">
     </div>

@@ -246,6 +246,16 @@ table {
   margin-top: 100px;
 }
 
+.input {
+  border: 0px;
+  height: 35px;
+  border-radius: 10px;
+  width: auto;
+  padding-left: 10px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
 .modal {
   z-index: 3;
   position: fixed;
@@ -257,12 +267,15 @@ table {
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
   opacity: 0;
+  font-size: 16px;
+  color: white;
 }
 
 .modal__button {
   margin: auto;
   width: 100px;
-  height: 100px;
+  height: 40px;
+  font-size: 15px;
 }
 
 .modal__backdrop {
@@ -282,7 +295,7 @@ table {
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,9 +303,8 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
-  color: black;
-  height: 300px;
+  background-color: #2f39b2;
+  border-radius: 25px;
   width: 100%;
   max-width: 300px;
   -webkit-transition: -webkit-transform .4s ease;
@@ -302,6 +314,45 @@ table {
   -webkit-transform: translate(0px, -800px);
           transform: translate(0px, -800px);
   position: relative;
+}
+
+.closeModal {
+  width: 15px;
+  height: 15px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.level__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .img__abs {
@@ -423,6 +474,14 @@ table {
 
 .circle__orange {
   background-color: #f48b41;
+}
+
+.circle--map {
+  z-index: 4;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  margin-left: 5px;
 }
 
 #mapid {
