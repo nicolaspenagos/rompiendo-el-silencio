@@ -24,7 +24,6 @@ report.addEventListener('click', function() {
 
 function handleOpenModal() {
 
-
     errorLb.classList.add('hidden');
     document.body.style.overflow = 'hidden';
     modal.style.display = 'block';

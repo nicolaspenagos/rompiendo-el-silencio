@@ -52,10 +52,26 @@ database.ref('reports/').on('value', function(data) {
 
         const report = data.val();
         console.log(report.lat + ' ' + report.lon);
-        const marker = L.marker([report.lat, report.lon]).addTo(mymap);
+        const marker = L.marker([report.lat, report.lon], { icon: redIcon }).addTo(mymap);
         const popup = marker.bindPopup(`<b>${report.name}</b><br/>${report.msg}`);
         markers.push(marker);
 
     });
 
 });
+
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: './img/s.png',
+        iconSize: [24, 33],
+        shadowSize: [24, 47],
+        iconAnchor: [0, 24],
+        shadowAnchor: [0, 24],
+        popupAnchor: [15, -25]
+    }
+});
+
+var orangeIcon = new LeafIcon({ iconUrl: './img/orange_marker.png' }),
+    redIcon = new LeafIcon({ iconUrl: './img/red-marker.png' }),
+    yellowIcon = new LeafIcon({ iconUrl: './img/yellow_marker.png' });
