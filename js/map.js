@@ -63,11 +63,11 @@ database.ref('reports/').on('value', function(data) {
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: './img/s.png',
+        shadowUrl: './img/sss.png',
         iconSize: [24, 33],
-        shadowSize: [24, 47],
+        shadowSize: [45, 37],
         iconAnchor: [0, 24],
-        shadowAnchor: [-13, 24],
+        shadowAnchor: [-8, 20],
         popupAnchor: [15, -25]
     }
 });
