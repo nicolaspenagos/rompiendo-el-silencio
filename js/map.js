@@ -67,7 +67,7 @@ var LeafIcon = L.Icon.extend({
         iconSize: [24, 33],
         shadowSize: [24, 47],
         iconAnchor: [0, 24],
-        shadowAnchor: [0, 24],
+        shadowAnchor: [-13, 24],
         popupAnchor: [15, -25]
     }
 });
