@@ -205,6 +205,10 @@ table {
     border: none;
     border-radius: 8px;
     margin-top: 15px;
+    &__map {
+        position: absolute;
+        z-index: 1;
+    }
     &--white {
         background-color: white;
         color: $blue-color;
