@@ -5,7 +5,7 @@ const attribution = '&copy; <a href="https://www.carto.com/">carto.com</a> contr
 const tileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png';
 
 const tiles = L.tileLayer(tileUrl, { attribution });
-
+mymap.removeControl(mymap.zoomControl);
 
 tiles.addTo(mymap);
 
